@@ -2,10 +2,13 @@ package main.java.com.eugene.algorithms.NumberManipulation;
 
 import org.junit.Test;
 
+import java.math.BigInteger;
+
 import static junit.framework.TestCase.assertEquals;
 
 public class BinaryToDecimal {
     public static int convertBinaryToDecimal(String binaryString){
+        BigInteger a = new BigInteger(binaryString,2);
         return Integer.parseInt(binaryString, 2);
     }
 
