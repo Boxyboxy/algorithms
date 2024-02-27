@@ -1,10 +1,20 @@
 package main.java.com.eugene.algorithms.NumberManipulation;
 
+import org.junit.Test;
+
+import static junit.framework.TestCase.assertEquals;
+
 public class BinaryToDecimal {
     public static int convertBinaryToDecimal(String binaryString){
         return Integer.parseInt(binaryString, 2);
     }
 
+    @Test
+    public void testCase1(){
+        assertEquals(53, convertBinaryToDecimal("110101"));
+    }
+
+ 
     public static void main(String[] args) {
         // Binary string
         String binaryString = "110101";
@@ -16,4 +26,6 @@ public class BinaryToDecimal {
         System.out.println("Binary: " + binaryString);
         System.out.println("Decimal: " + decimalValue);
     }
+
+
 }

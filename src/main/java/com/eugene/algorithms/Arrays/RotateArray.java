@@ -1,8 +1,11 @@
 package main.java.com.eugene.algorithms.Arrays;
 
-public class RotateArray {
-    // Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
-
+//189. Rotate Array (MEDIUM)
+//https://leetcode.com/problems/rotate-array/
+// #Array
+// #Math
+// #Two pointer
+// Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
 //    Example 1:
 //
 //    Input: nums = [1,2,3,4,5,6,7], k = 3
@@ -18,6 +21,8 @@ public class RotateArray {
 //    Explanation:
 //    rotate 1 steps to the right: [99,-1,-100,3]
 //    rotate 2 steps to the right: [3,99,-1,-100]
+public class RotateArray {
+
 
     public static void rotate(int[] nums, int k){
         int refactoredRotation = k % nums.length;

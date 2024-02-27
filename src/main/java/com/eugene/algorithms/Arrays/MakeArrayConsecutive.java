@@ -1,12 +1,17 @@
 package main.java.com.eugene.algorithms.Arrays;
 
-// Have the function arraychallenge take the array of integers stored in arr
+// Coderbyte test
+// Have the function findMinIntegers take the array of integers stored in arr
 // and return the minimum number of integers needed to make the contents of arr consecutive from the lowest number to the highest number.
 //
 // For example: If arr contains 486 then the output should be 2 because two numbers need to be added to the array 5 and 7
 // to make it a consecutive array of numbers from 4 to 8
 
+import org.junit.Test;
+
 import java.util.Arrays;
+
+import static junit.framework.TestCase.assertEquals;
 
 public class MakeArrayConsecutive {
     public static int findMinIntegers(int[] arr) {
@@ -29,14 +34,15 @@ public class MakeArrayConsecutive {
         return neededIntegers;
     }
 
-    public static void main(String[] args) {
-        // Example usage
-        int[] arr = {4, 8, 6};
-        int result = findMinIntegers(arr);
-        System.out.println("Minimum number of integers needed: " + result);
-
-        int[] arr1 = {-2, 8, 10};
-        int result1 = findMinIntegers(arr1);
-        System.out.println("Minimum number of integers needed: " + result1);
+    @Test
+    public void testCase1(){
+        assertEquals(2, findMinIntegers(new int[]{4, 8, 6}));
     }
+
+    @Test
+    public void testCase2(){
+        assertEquals(10, findMinIntegers(new int[]{-2, 8, 10}) );
+    }
+
+
 }
